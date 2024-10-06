@@ -1,0 +1,270 @@
+/* Este repositório base fué creado para ayudarte en caso que no sepas como comenzar, recuerda que el portafolio es tu carta de presentación y debes darle tu cara, por eso te invitamos a personalizarlo según tu estilo y preferencias no te limites apenas al layout propuesto en figma  
+*/
+
+
+
+:root {
+    --color-de-fondo: #F5F5F5;
+    --color-de-fondo-menu: #ffffff;
+    --color-de-link: #000000;
+}
+
+body {
+    background-color: var(--color-de-fondo);
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    line-height: 1.6;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-de-link);
+}
+
+/* ------------------------------ Sección Menú -------------------------------*/
+.cabecera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--color-de-fondo-menu);
+}
+
+.cabecera__logo {
+    max-width: 80px; /* Ajuste para pantallas pequeñas */
+}
+
+.cabecera__titulo {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.navegacion__lista {
+    display: none;
+}
+
+.navegacion__elemento a {
+    font-size: 0.9rem;
+}
+/* ------------------------------ Sección Presentación ------------------------------*/
+
+.redes{
+    display: flex;
+}
+.redes li{
+    display: flex;
+}
+
+/* ------------------------------ Sección de Habilidades y Aficiones ------------------------------ */
+
+
+.habilidades__lista, .aficiones__lista{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    gap: 16px;
+}
+
+.habilidades__lista li, .aficiones__lista li{
+    background-color: aquamarine;
+    width: 115px;
+    height: 100px;
+    padding: 16px;
+    border-radius: 5px;
+    
+}
+
+.habilidades__elemento{
+    flex-grow: 1;
+}
+
+
+/* ------------------------------ Sección sobre mí ----------------------------------*/
+
+
+/*------------------------------ Sección de Habilidades ------------------------------*/
+
+
+/*------------------------------ Sección de Aficiones --------------------------------*/
+
+
+/*------------------------------ Sección de Proyectos --------------------------------*/
+
+
+/*------------------------------ Sección de Contacto ---------------------------------*/
+
+
+/* ------------------------------ Responsividad ---------------------------------------*/
+
+/* Tablets y pantallas más grandes */
+@media (min-width: 768px) {
+    .cabecera {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cabecera__logo {
+        max-width: 100px;
+    }
+
+    .cabecera__titulo {
+        font-size: 1.5rem;
+    }
+
+    .navegacion__lista {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 0;
+    }
+
+    .navegacion__elemento a {
+        font-size: 1rem;
+    }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1024px) {
+    /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
+    .cabecera__titulo {
+        font-size: 1.8rem;
+    }
+
+    .navegacion__elemento a {
+        font-size: 1.1rem;
+    }
+}
+
+/*Pantallas chicas , celular*/
+
+@media (max-width: 360px){
+    .presentacion__foto{
+        width: 100px;
+        height: 100px;
+    }
+    .cabecera{
+         font-size: 23px;
+    }
+
+    .cabecera, .presentacion, .sobre-mi{
+        padding: 1rem;
+        font-size: 0.875rem;
+        line-height: 1.2;
+    }
+    .redes {display: flex;
+        padding: 0; 
+        margin: 0; 
+        justify-content: space-between;
+    }
+   
+    .cabecera{
+        
+
+        padding: 0;
+        display: flex;
+    flex-direction: row;
+align-items: center;
+
+}
+    .cabecera__logo, .cabecera__logo{
+        margin:10px
+    }
+  
+
+    /* Muestra solo el elemento "Contacto" */
+
+    
+    .navegacion__lista {
+        display: flex;
+    
+    }
+
+    .navegacion__elemento {
+        display: none; /* Ocultamos todos los elementos */
+    }
+
+
+    /* Mostramos únicamente el elemento "Contacto" */
+    .navegacion__elemento.contacto {
+        display: block;
+        font-size: 19.2px; 
+    }
+    
+    .habilidades__titulo, .aficiones__titulo, .formacion__titulo, .proyectos__titulo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .habilidades__lista, .aficiones__lista {
+      
+        gap: 16px; /* Espacio entre las tarjetas */
+        padding: 1rem; /* Espacio interior */
+    }
+    
+    .formacion{
+        background-color: rgb(175, 170, 170);
+    
+    }
+
+    .contenedorImg{
+       background-color: #F5F5F5;
+       width: 270px;
+       display: flex;
+       justify-content: center;
+    }
+   .proyectos, .contacto{
+  padding: 15px;
+   }
+
+   .contacto__titulo{
+    padding: 20px;
+    margin: 0;
+   }
+   .contacto__formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+   }
+   .contacto{
+    background-color: rgb(167, 248, 46);
+   }
+
+.contacto__campotext{
+    margin-bottom: 30px;
+    height: 100px;
+}
+
+   .contacto__campo, .contacto__boton{
+    margin-bottom: 30px;
+    height: 40px;
+    border-radius: 8px;
+   }
+
+  .contacto__boton{
+    background-color: rgb(53, 53, 197);
+   color: #F5F5F5;
+  }
+
+  .pie{
+    padding: 20px;
+    font-size: 14px;
+  }
+  .pie p{
+    text-align: center;
+    width: 270px;
+  }
+
+ 
+
+
+}
